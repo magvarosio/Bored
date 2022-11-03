@@ -1,22 +1,22 @@
-import { useState, useEffect } from 'react'
-import { Link, useParams, useNavigate } from 'react-router-dom'
-import axios from 'axios'
+import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 import charityImg from '../../images/Charity.jpeg'
-// import cookingImg from '../../images/Cooking.webp'
-// import diyImg from '../../images/DIY.webp'
-// import educationImg from '../../images/Charity.jpeg'
-// import musicImg from '../../images/Charity.jpeg'
-// import houseworkImg from '../../images/Charity.jpeg'
-// import recreationImg from '../../images/Charity.jpeg'
-// import relaxationImg from '../../images/Charity.jpeg'
-// import socialImg from '../../images/Charity.jpeg'
+import cookingImg from '../../images/Cooking.webp'
+import diyImg from '../../images/Diy.webp'
+import educationImg from '../../images/Education.webp'
+import musicImg from '../../images/Music.webp'
+import houseworkImg from '../../images/Housework.webp'
+import recreationImg from '../../images/Recreation.webp'
+import relaxationImg from '../../images/Relaxation.jpeg'
+import socialImg from '../../images/Social.jpeg'
 
 // Bootstrap Components
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Card from 'react-bootstrap/Card'
+import Button from 'react-bootstrap/Button'
 
 const ActivityIndex = () => {
   // ! State
@@ -30,41 +30,48 @@ const ActivityIndex = () => {
   const choicesArray = [
     {
       type: 'Cooking',
-      image: charityImg
+      image: cookingImg
     },
     {
       type: 'Charity',
-      image: ''
+      image: charityImg
     },
     {
       type: 'Music',
-      image: ''
+      image: musicImg
     },
     {
       type: 'Social',
-      image: ''
+      image: socialImg
     },
     {
       type: 'Recreation',
-      image: ''
+      image: recreationImg
     },
     {
-      type: 'Household',
-      image: ''
+      type: 'Housework',
+      image: houseworkImg
     },
     {
       type: 'Education',
-      image: ''
+      image: educationImg
     },
     {
       type: 'DIY',
-      image: ''
+      image: diyImg
     },
     {
       type: 'Relaxation',
-      image: ''
+      image: relaxationImg
     }
   ]
+
+  // const randomChoice = () => {
+  //   let random = Math.floor(Math.random() * 10)
+  //   console.log(choicesArray)
+  //   return choicesArray[random]
+  // }
+  // randomChoice()
 
   const handleClick = (choice) => {
     navigate('/choice', { state: { choice: choice } })
@@ -93,7 +100,7 @@ const ActivityIndex = () => {
               </Col>
             )
           })}
-          <button>Suprise Me!</button>
+          <Button onClick={() => handleClick()}>Suprise Me!</Button>
         </Row>
       </Container>
     </main>

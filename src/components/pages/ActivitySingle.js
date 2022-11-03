@@ -30,7 +30,6 @@ const ActivitySingle = () => {
       const { data } = await axios.get(
         `https://www.boredapi.com/api/activity/?type=${location.state.choice.type.toLowerCase()}`
       )
-      // console.log(activity, type, key)
       setChoice(data)
     } catch (err) {
       console.log(err)
