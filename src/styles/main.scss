@@ -1,0 +1,76 @@
+
+// Variables
+$primary: #b3d8f8;
+
+
+// COMMON
+.site-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.navbar {
+  background-color: darken($primary, 15%)
+}
+
+main {
+  background-color: $primary;
+  flex-grow: 1;
+}
+
+.btn-main{
+  background-color: darken($primary, 15%);
+  &:hover{
+    background-color: darken($primary, 20%);
+  }
+}
+
+
+
+
+// HERO TEMPLATE PAGE
+.hero-page{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .hero {
+    background-color: lighten($primary, 5%);
+    padding: 40px;
+    border-radius: 18px;
+  }
+}
+
+
+// Bread Card
+.bread-card{
+  .card {
+    border: none;
+    border-radius: 8px;
+  }
+  a {
+    text-decoration: none;
+    text-align: center;
+    color: #000;
+  }
+  .card-image {
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+  }
+  .card-body {
+    background-color: darken($primary, 15%);
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+  }
+}
+
+// Bread Single
+.single-page {
+  img {
+    max-width: 100%;
+  }
+}
