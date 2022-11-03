@@ -10,7 +10,7 @@ import Card from 'react-bootstrap/Card'
 
 const ActivityIndex = () => {
   // ! State
-  const [activity, setActivity] = useState([]) // check if an array or object?
+  // const [choice, setChoice] = useState([]) // check if an array or object?
 
   // ! JSX
   return (

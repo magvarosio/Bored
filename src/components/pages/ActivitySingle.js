@@ -9,39 +9,47 @@ import Col from 'react-bootstrap/Col'
 
 const ActivitySingle = () => {
   // ! State
-  const [activity, setActivity] = useState([]) // check if an array or object?
+  const [choice, setChoice] = useState({
+    type: '',
+    activity: '',
+    key: ''
+  })
+  
   const [errors, setErrors] = useState(false)
 
-  const { activityKey } = useParams()
+  const { choiceKey } = useParams()
 
   // ! Execution
   useEffect(() => {
-    const getActivity = async () => {
+    const getChoice = async () => {
       try {
         const { data } = await axios.get(
           'https://www.boredapi.com/api/activity/?type=cooking'
         )
-        setActivity(data)
+        const { type, activity, key } = choice
+        console.log(activity, type, key)
+        setChoice(data)
       } catch (err) {
         console.log(err)
+        // setErrors(true)
       }
     }
-    getActivity()
-  }, [activityKey])
+    getChoice()
+  }, [choiceKey])
 
   return (
     <main className="single-page">
       <Container className="mt-4">
         <Row>
-          {activity ? (
+          {choice ? (
             <>
               <h1 className="mb-4">Today...</h1>
               <Col md="6">
                 <img src="" alt="" />
               </Col>
               <Col md="6">
-                <h2>Description</h2>
-                <Link to="/activity" className="btn btn-main">
+                <h2>{choice.activity}</h2>
+                <Link to="/choice" className="btn btn-main">
                   Back to activity
                 </Link>
               </Col>

@@ -19,7 +19,7 @@ const PageNavbar = () => {
             <Nav.Link as={Link} to="/">
               Home
             </Nav.Link>
-            <Nav.Link as={Link} to="/activity">
+            <Nav.Link as={Link} to="/choice">
               Activity
             </Nav.Link>
           </Nav>
