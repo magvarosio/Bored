@@ -5,9 +5,9 @@ import cookingImg from '../../images/Cooking.webp'
 import diyImg from '../../images/Diy.webp'
 import educationImg from '../../images/Education.webp'
 import musicImg from '../../images/Music.webp'
-import houseworkImg from '../../images/Housework.webp'
-import recreationImg from '../../images/Recreation.webp'
+import recreationImg from '../../images/Recreational.png'
 import relaxationImg from '../../images/Relaxation.jpeg'
+import houseworkImg from '../../images/Housework.webp'
 import socialImg from '../../images/Social.jpeg'
 
 // Bootstrap Components
@@ -41,11 +41,11 @@ const ActivityIndex = () => {
       image: socialImg
     },
     {
-      type: 'Recreation',
+      type: 'Recreational',
       image: recreationImg
     },
     {
-      type: 'Housework',
+      type: 'Busywork',
       image: houseworkImg
     },
     {

@@ -4,7 +4,7 @@ import axios from 'axios'
 
 // ! Bootstrap Components
 import Container from 'react-bootstrap/Container'
-import Row from 'react-bootstrap/Row'
+import Card from 'react-bootstrap/Card'
 import Col from 'react-bootstrap/Col'
 import Button from 'react-bootstrap/Button'
 
@@ -55,19 +55,19 @@ const ActivitySingle = () => {
   return (
     <main className="single-page">
       <Container className="mt-4">
-        <Row>
-          {choice ? (
-            <>
-              <h1 className="mb-4">Today...</h1>
-              <Col md="6">
+        {choice ? (
+          <>
+            <h1 className="mb-4">Today, why not...</h1>
+            <Card.Body>
+              <Col className="single-activity-card mb-6">
                 <img
-                  className="card-image"
+                  className="single-card-image"
                   src={location.state.choice.image}
                   alt={location.state.choice.type}
                 />
               </Col>
-              <Col md="6">
-                <h2>{choice.activity}</h2>
+              <Col className="single-text" md="4">
+                <h2>{choice.activity}!</h2>
                 <Button className="btn btn-main" onClick={handleGetChoice}>
                   Try again
                 </Button>
@@ -75,13 +75,13 @@ const ActivitySingle = () => {
                   Back to activity
                 </Button>
               </Col>
-            </>
-          ) : errors ? (
-            <h2>Something went wrong! Please try again later!</h2>
-          ) : (
-            <h2>Loading</h2>
-          )}
-        </Row>
+            </Card.Body>
+          </>
+        ) : errors ? (
+          <h2>Something went wrong! Please try again later!</h2>
+        ) : (
+          <h2>Loading</h2>
+        )}
       </Container>
     </main>
   )

@@ -1,6 +1,6 @@
 
 // Variables
-$primary: #b3d8f8;
+$primary: #8d9fd6;
 @import url('https://fonts.googleapis.com/css2?family=Stick+No+Bills&display=swap');
 
 
@@ -39,9 +39,33 @@ main {
   align-items: center;
   justify-content: center;
   .hero {
-    background-color: lighten($primary, 5%);
+    background-color:#b8c7f58c;
     padding: 40px;
     border-radius: 18px;
+  }
+  img{
+    height: 400px;
+    border-radius: 8px;
+  }
+  h1 {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  p .lead{
+    margin-top: 20px;
+    font-size: 28px;
+  }
+  a{
+    border:none;
+    padding:30px;
+    color:black;
+  }
+  div, a{
+    font-size: 20px;
+  }
+  .lead{
+    padding-top:20px;
+    font-size: 30px;
   }
 }
 
@@ -67,14 +91,44 @@ main {
   }
   .card-body {
     background-color: darken($primary, 15%);
-    border-bottom-left-radius: 8px;
-    border-bottom-right-radius: 8px;
+    border-radius: 8px;
   }
 }
 
-// Bread Single
+// Activity Single
 .single-page {
-  img {
-    max-width: 100%;
+  .card-body {
+    background-color: darken($primary, 15%);
+    border-radius: 8px;
+    
   }
+  .single-card-image{
+    width:550px;
+    height:500px;
+  }
+  .card{
+    width:fit-content;
+  }
+  .card-body{
+    padding: 30px;
+    display:flex;
+  }
+  .col-md-4{
+    padding:40px;
+  }
+  h2 {
+    padding-top: 80px;
+    padding-bottom: 100px;
+    text-align: center;
+  }
+  h1{
+    text-align: center;
+  }
+a, button { 
+  background-color: #8d9fd6;
+  border:none;
+  padding: 10px;
+  margin-left: 10px;
+  color:#000
+}
 }
