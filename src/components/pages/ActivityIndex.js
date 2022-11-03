@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 
 import charityImg from '../../images/Charity.jpeg'
@@ -19,9 +18,6 @@ import Card from 'react-bootstrap/Card'
 import Button from 'react-bootstrap/Button'
 
 const ActivityIndex = () => {
-  // ! State
-  const [choice, setChoice] = useState([]) // check if an array or object?
-
   //! Nav
   const navigate = useNavigate()
 
@@ -84,23 +80,30 @@ const ActivityIndex = () => {
         <Row>
           {choicesArray.map((choice) => {
             return (
-              <Col key={choice.type} onClick={() => handleClick(choice)}>
-                {/* <Link to="/choice/key" className="btn btn-main"> */}
-                {/* <Link to={`/choice/${choiceKey}`} className="btn btn-main"> */}
+              <Col
+                key={choice.type}
+                className="activity-card mb-4"
+                onClick={() => handleClick(choice)}
+              >
                 <Card>
-                  <div className="card-image"></div>
                   <Card.Body>
                     <Card.Title className="mb-0"></Card.Title>
                     <h2>{choice.type}</h2>
-                    <img src={choice.image} alt={choice.type} />
+                    <div className="card-image">
+                      <img
+                        className="card-image"
+                        src={choice.image}
+                        alt={choice.type}
+                      />
+                    </div>
                   </Card.Body>
                 </Card>
-                {/* </Link> */}
-                {/* </Link> */}
               </Col>
             )
           })}
-          <Button onClick={() => handleClick()}>Suprise Me!</Button>
+          <Button className="btn btn-main" onClick={() => handleClick()}>
+            Suprise Me!
+          </Button>
         </Row>
       </Container>
     </main>
