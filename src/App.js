@@ -14,8 +14,8 @@ const App = () => {
         <PageNavbar />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/choice" element={<ActivityIndex />} />
-          <Route path="/choice/:choiceKeys" element={<ActivitySingle />} />
+          <Route path="/choiceIndex" element={<ActivityIndex />} />
+          <Route path="/choice" element={<ActivitySingle />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

@@ -7,7 +7,7 @@ const Home = () => {
       <div className="hero">
         <h1 className="display-3">🥱 Bored? 🥱</h1>
         <p className="lead">Stop being boring.</p>
-        <Link to="/activity" className="btn btn-main">
+        <Link to="/choiceIndex" className="btn btn-main">
           Discover something fun to do today!
         </Link>
       </div>
