@@ -14,7 +14,7 @@ const ActivitySingle = () => {
     activity: '',
     key: ''
   })
-  
+
   const [errors, setErrors] = useState(false)
 
   const { choiceKey } = useParams()

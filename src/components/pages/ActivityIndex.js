@@ -18,7 +18,7 @@ const ActivityIndex = () => {
       <Container className="mt-4">
         <Row>
           <Col>
-            <Link>
+            <Link to="/choice/key" className="btn btn-main">
               <Card>
                 <div className="card-image"></div>
                 <Card.Body>
