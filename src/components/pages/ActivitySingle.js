@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useCallback } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import axios from 'axios'
 
@@ -25,33 +25,24 @@ const ActivitySingle = () => {
   //! Variables
 
   // ! Execution
-  const handleGetChoice = async () => {
+
+  const handleGetChoice = useCallback(async (url) => {
     try {
       const { data } = await axios.get(
-        `https://www.boredapi.com/api/activity/?type=${location.state.choice.type.toLowerCase()}`
+        url
       )
       setChoice(data)
     } catch (err) {
       console.log(err)
       setErrors(true)
     }
-  }
-
+  }, [])
   useEffect(() => {
-    const getChoice = async () => {
-      try {
-        const { data } = await axios.get(
-          `https://www.boredapi.com/api/activity/?type=${location.state.choice.type.toLowerCase()}`
-        )
-        setChoice(data)
-      } catch (err) {
-        console.log(err)
-        setErrors(true)
-      }
-    }
-    getChoice()
-  }, [location])
+    handleGetChoice(`https://www.boredapi.com/api/activity/?type=${location.state.choice.type.toLowerCase()}`)
+  }, [location, handleGetChoice])
 
+
+  
   return (
     <main className="single-page">
       <Container className="mt-4">

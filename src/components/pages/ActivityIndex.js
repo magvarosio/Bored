@@ -76,13 +76,13 @@ const ActivityIndex = () => {
   // ! JSX
   return (
     <main className="index-page">
-      <Container className="mt-4">
+      <Container className="mt-0">
         <Row>
           {choicesArray.map((choice) => {
             return (
               <Col
                 key={choice.type}
-                className="activity-card mb-4"
+                className="activity-card mt-4 col-md-4 col-sm-6 col-lg-4 col-xl-4 col-xxl-4"
                 onClick={() => handleClick(choice)}
               >
                 <Card>
@@ -101,7 +101,11 @@ const ActivityIndex = () => {
               </Col>
             )
           })}
-          <Button className="btn btn-main" onClick={() => handleClick()}>
+          <Button
+            id="suprise"
+            className="btn btn-main mt-3 mb-3"
+            onClick={() => handleClick()}
+          >
             Suprise Me!
           </Button>
         </Row>

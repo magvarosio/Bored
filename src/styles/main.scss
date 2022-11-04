@@ -1,15 +1,14 @@
 
-// Variables
+// ! Variables
 $primary: #8d9fd6;
 @import url('https://fonts.googleapis.com/css2?family=Stick+No+Bills&display=swap');
 
 
 * {
   font-family: 'Stick No Bills', sans-serif;
-
 }
 
-// COMMON
+// ! Common
 .site-wrapper {
   display: flex;
   flex-direction: column;
@@ -32,8 +31,13 @@ main {
   }
 }
 
+.text{
+  font-size: 30px;
+  padding-right:40px;
+  padding-left:40px;
+}
 
-// HERO TEMPLATE PAGE
+// ! Hero
 .hero-page{
   display: flex;
   align-items: center;
@@ -70,7 +74,7 @@ main {
 }
 
 
-// Activity Card
+// ! Activity Card
 .activity-card{
   .card {
     border: none;
@@ -82,20 +86,28 @@ main {
     color: #000;
   }
   .card-image {
-    height: 200px;
-    width:250px;
+    height: 250px;
+    width: 300px;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     border-radius: 8px;
+    margin: 0 auto;
   }
   .card-body {
     background-color: darken($primary, 15%);
     border-radius: 8px;
-  }
+  } 
 }
 
-// Activity Single
+#suprise {
+  border:none;
+  padding:20px;
+  color:black;
+  font-size: 40px;
+}
+
+// ! Activity Single
 .single-page {
   .card-body {
     background-color: darken($primary, 15%);

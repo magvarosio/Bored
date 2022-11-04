@@ -14,10 +14,10 @@ const PageNavbar = () => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
           <Nav>
-            <Nav.Link as={Link} to="/">
+            <Nav.Link as={Link} to="/" className="text">
               Home
             </Nav.Link>
-            <Nav.Link as={Link} to="/choiceIndex">
+            <Nav.Link as={Link} to="/choiceIndex" className="text">
               Activity
             </Nav.Link>
           </Nav>
