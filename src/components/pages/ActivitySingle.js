@@ -54,7 +54,7 @@ const ActivitySingle = () => {
           <>
             <h1 className="mb-4">Today, why not...</h1>
             <Card.Body>
-              <Col className="single-activity-card mb-6">
+              <Col id="activity-card" className="single-activity-card mb-6">
                 <img
                   className="single-card-image"
                   src={location.state.choice.image}
@@ -74,7 +74,7 @@ const ActivitySingle = () => {
                   Try again
                 </Button>
                 <Button as={Link} to="/choiceIndex" className="btn btn-main">
-                  Back to activity
+                  Back to Activities
                 </Button>
               </Col>
             </Card.Body>

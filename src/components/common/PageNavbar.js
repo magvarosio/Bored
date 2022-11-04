@@ -18,7 +18,7 @@ const PageNavbar = () => {
               Home
             </Nav.Link>
             <Nav.Link as={Link} to="/choiceIndex" className="text">
-              Activity
+              Activities
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>

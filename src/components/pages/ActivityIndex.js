@@ -1,13 +1,13 @@
 import { useNavigate } from 'react-router-dom'
 
-import charityImg from '../../images/Charity.jpeg'
+import charityImg from '../../images/Charity.webp'
 import cookingImg from '../../images/Cooking.webp'
 import diyImg from '../../images/Diy.webp'
 import educationImg from '../../images/Education.webp'
 import musicImg from '../../images/Music.webp'
 import recreationImg from '../../images/Recreational.png'
 import relaxationImg from '../../images/Relaxation.jpeg'
-import houseworkImg from '../../images/Housework.webp'
+import houseworkImg from '../../images/Housework.png'
 import socialImg from '../../images/Social.jpeg'
 
 // Bootstrap Components
