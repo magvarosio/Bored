@@ -28,9 +28,7 @@ const ActivitySingle = () => {
 
   const handleGetChoice = useCallback(async (url) => {
     try {
-      const { data } = await axios.get(
-        url
-      )
+      const { data } = await axios.get(url)
       setChoice(data)
     } catch (err) {
       console.log(err)
@@ -38,11 +36,17 @@ const ActivitySingle = () => {
     }
   }, [])
   useEffect(() => {
-    handleGetChoice(`https://www.boredapi.com/api/activity/?type=${location.state.choice.type.toLowerCase()}`)
+    handleGetChoice(
+      `https://www.boredapi.com/api/activity/?type=${location.state.choice.type.toLowerCase()}`
+    )
   }, [location, handleGetChoice])
 
+  // const getRandomChoice = () => {
+  //   handleGetChoice('http://www.boredapi.com/api/activity')
+  // }
 
-  
+  // getRandomChoice()
+
   return (
     <main className="single-page">
       <Container className="mt-4">
@@ -59,7 +63,14 @@ const ActivitySingle = () => {
               </Col>
               <Col className="single-text" md="4">
                 <h2>{choice.activity}!</h2>
-                <Button className="btn btn-main" onClick={handleGetChoice}>
+                <Button
+                  className="btn btn-main"
+                  onClick={() =>
+                    handleGetChoice(
+                      `https://www.boredapi.com/api/activity/?type=${location.state.choice.type.toLowerCase()}`
+                    )
+                  }
+                >
                   Try again
                 </Button>
                 <Button as={Link} to="/choiceIndex" className="btn btn-main">

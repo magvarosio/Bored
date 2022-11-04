@@ -62,15 +62,14 @@ const ActivityIndex = () => {
     }
   ]
 
-  // const randomChoice = () => {
-  //   let random = Math.floor(Math.random() * 10)
-  //   console.log(choicesArray)
-  //   return choicesArray[random]
-  // }
-  // randomChoice()
-
-  const handleClick = (choice) => {
+  const navigateToChoicePage = (choice) => {
     navigate('/choice', { state: { choice: choice } })
+  }
+
+  const getRandomChoice = () => {
+    const randomIndex = Math.floor(Math.random() * choicesArray.length)
+    const randomChoice = choicesArray[randomIndex]
+    navigateToChoicePage(randomChoice)
   }
 
   // ! JSX
@@ -83,7 +82,7 @@ const ActivityIndex = () => {
               <Col
                 key={choice.type}
                 className="activity-card mt-4 col-md-4 col-sm-6 col-lg-4 col-xl-4 col-xxl-4"
-                onClick={() => handleClick(choice)}
+                onClick={() => navigateToChoicePage(choice)}
               >
                 <Card>
                   <Card.Body>
@@ -104,7 +103,7 @@ const ActivityIndex = () => {
           <Button
             id="suprise"
             className="btn btn-main mt-3 mb-3"
-            onClick={() => handleClick()}
+            onClick={() => getRandomChoice()}
           >
             Suprise Me!
           </Button>
