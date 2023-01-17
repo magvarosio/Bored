@@ -7,6 +7,7 @@
 
 ## Table of Contents
 - [Concept](#concept)
+- [Deployment](#deployment)
 - [Technologies Used](#technologies-used)
 - [Project Brief](#project-brief)
 - [Installation instructions](#installation-instructions)
@@ -22,7 +23,13 @@
 
 "Bored? Is a website that tries to inspire you with ideas for things to do that are meaningful and productive. When you enter the site, you see a homepage that lets you browse different activity categories. When you choose a category, the site suggests an activity for you to try. If you don't like the suggestion, you can click "Try again" to get a new suggestion within that same category. Or, if you're feeling adventurous, you can choose the "Surprise Me!" option to get a random activity from any category.
 
-Click this link to see the Project: https://general-assembly-project-two.netlify.app/ 
+
+## Deployment
+
+Please follow this link to view the Project: https://general-assembly-project-two.netlify.app/ 
+
+Repository link: https://github.com/magvarosio/Bored
+
 
 
 ## Technologies Used 
